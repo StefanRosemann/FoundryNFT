@@ -17,4 +17,11 @@ contract FoundryNFTTest is Test {
         foundryNFT.mint();
         assertEq(foundryNFT.totalSupply(), ts + 1);
     }
+
+    function testIfStatement() public {
+        FoundryNFT foundryNFT = new FoundryNFT();
+
+        assertEq(foundryNFT.ifStatement(true), true);
+        assertEq(foundryNFT.ifStatement(false), false);
+    }
 }
